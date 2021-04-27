@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeekTwoData.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <BoxView Grid.Row="0" Color="CadetBlue" />
+        <Label Grid.Row="0" x:Name="label1"
+               Text="RACECAR"
+               FontSize="48"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        
+        <BoxView Grid.Row="1" Color="LightYellow" />
+        <Label Grid.Row="1" x:Name="label2"
+               Text="RACECAR"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" 
+               BindingContext="{x:Reference Name=slider1}"
+               Rotation="{Binding Path=Value}"/>
+
+        <BoxView Grid.Row="2" Color="Pink" />
+        <Slider Grid.Row="2" x:Name="slider1"
+                Maximum="360"
+                VerticalOptions="CenterAndExpand" 
+                ThumbColor="CadetBlue"/>
+    </Grid>
+
+    
+</ContentPage>
+
+
+<!--<StackLayout>
+    <Label Text="1" FontSize="36" Padding="30,10,30,10"></Label>
+    <Label Text="2" FontSize="36" Padding="30,10,30,10"></Label>
+    <Label Text="3" FontSize="36" Padding="30,10,30,10"></Label>
+</StackLayout>
+
+<StackLayout>
+    <Label Text="1" FontSize="36" Padding="30,10,30,10"></Label>
+    <Label Text="2" FontSize="36" Padding="30,10,30,10"></Label>
+    <Label Text="3" FontSize="36" Padding="30,10,30,10"></Label>
+</StackLayout>
+
+<StackLayout>
+    <Label Text="1" FontSize="36" Padding="30,10,30,10"></Label>
+    <Label Text="2" FontSize="36" Padding="30,10,30,10"></Label>
+    <Label Text="3" FontSize="36" Padding="30,10,30,10"></Label>
+</StackLayout>-->
+
+<!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <BoxView Grid.Column="0" Grid.Row="0" Color="Cyan" />
+        <BoxView Grid.Column="0" Grid.Row="1" Color="Magenta" />
+        <BoxView Grid.Column="1" Grid.Row="0" Color="Yellow" />
+        <BoxView Grid.Column="1" Grid.Row="1" Color="Black" />
+        <BoxView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Color="Red" />
+    </Grid>-->
